@@ -2,27 +2,27 @@
 
 1. Create new Android Project
 
-⋅⋅⋅In Eclipse: File -> New -> Android Application Project
+   In Eclipse: File -> New -> Android Application Project
 
-⋅⋅⋅Application Name : AKAI
-⋅⋅⋅Project Name : AKAI
-⋅⋅⋅Package Name : com.wikia.akai
+   Application Name : AKAI
+   Project Name : AKAI
+   Package Name : com.wikia.akai
 
-⋅⋅⋅Minimum Required SDK: API 14
-⋅⋅⋅Target SDK: API 19
-⋅⋅⋅Compile with: API 19
-⋅⋅⋅Theme: Holo Light
+   Minimum Required SDK: API 14
+   Target SDK: API 19
+   Compile with: API 19
+   Theme: Holo Light
 
-⋅⋅⋅Next >
+   Next >
 
-⋅⋅⋅Create custom launcher icon -> unchecked
-⋅⋅⋅Create activity -> checked
-⋅⋅⋅Create Project in Workspace -> checked
+   Create custom launcher icon -> unchecked
+   Create activity -> checked
+   Create Project in Workspace -> checked
 
-⋅⋅⋅Next >
+   Next >
 
-⋅⋅⋅Create activity -> checked
-⋅⋅⋅Select: Blank Activity
+   Create activity -> checked
+   Select: Blank Activity
 
-⋅⋅⋅Next >
-⋅⋅⋅Finish
+   Next >
+   Finish
