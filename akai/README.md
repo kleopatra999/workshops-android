@@ -290,8 +290,32 @@
    
    Add Parse SDK to libs/ ([commit](https://github.com/Wikia/workshops-android/commit/5588974dc07bc0782305cdb7b821f1aa992d5209))
    
-   Added networking permissions to AndroidManifest.xml ([commit](https://github.com/Wikia/workshops-android/commit/eb201eca42903a1ca63c3adc5ab0f8457a13dec9))
+   Add networking permissions to AndroidManifest.xml ([commit](https://github.com/Wikia/workshops-android/commit/eb201eca42903a1ca63c3adc5ab0f8457a13dec9))
    ```xml
    <uses-permission android:name="android.permission.INTERNET" />
    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+   ```	
+   
+   Create new class in src/com/wikia/akai called AkaiApplication ([commit](https://github.com/Wikia/workshops-android/commit/fd0041a667dc5a8deffd313af17756215f45a3da))
+   ```java
+   package com.wikia.akai;
+
+   import com.parse.Parse;
+
+   import android.app.Application;
+
+   public class AkaiApplication extends Application {
+
+       @Override
+       public void onCreate() {
+           super.onCreate();
+
+           Parse.initialize(this, "qDhRqgjwaKjGA5OAEeK1cMrOeX6u3VwElOVZOeui", "tzL8H1oM5VsmpPZLM6zrdJQW6QG3BQhOLMUnZN5L");
+       }
+   }
+   ``` 
+   
+   Add AkaiApplication to application element in AndroidManifest.xml ([commit](https://github.com/Wikia/workshops-android/commit/493502556ba5bea7c4d1d9cb143f485eafb88826))
+   ```xml
+   android:name="com.wikia.akai.AkaiApplication"
    ```	
