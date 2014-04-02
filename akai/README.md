@@ -67,3 +67,4 @@
    ```xml
    <string name="details">Details</string>
    ```	
+   Change Button text to new details string ([commit](https://github.com/Wikia/workshops-android/commit/727d3ddbc12eece02c997cf21ee36c2aeb43eec4))
