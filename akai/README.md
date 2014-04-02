@@ -27,5 +27,16 @@
    Next >
    Finish
    
-2. Open res/layout/activity_main.xml
+2. Adding Fragment with Button
+   
+   Create new file in res/layout called fragment_user_data.xml 
+   ```xml
+   <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/hello_world" />
+   ```	
+
+   
+   
 
