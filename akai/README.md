@@ -280,3 +280,18 @@
    ```xml
    android:layout_width="match_parent"
    ```
+   
+   6. Storing/Loading usernames on server side with Parse
+   
+   Add new string to res/values/strings.xml ([commit](https://github.com/Wikia/workshops-android/commit/b282a225f39214bfc5243b0559d4f2bff922a43d))
+   ```xml
+   <string name="load">Load</string>
+   ```	
+   
+   Add Parse SDK to libs/ ([commit](https://github.com/Wikia/workshops-android/commit/5588974dc07bc0782305cdb7b821f1aa992d5209))
+   
+   Added networking permissions to AndroidManifest.xml ([commit](https://github.com/Wikia/workshops-android/commit/eb201eca42903a1ca63c3adc5ab0f8457a13dec9))
+   ```xml
+   <uses-permission android:name="android.permission.INTERNET" />
+   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+   ```	
