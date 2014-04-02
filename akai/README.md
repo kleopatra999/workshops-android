@@ -64,7 +64,8 @@
        android:id="@+id/user_data_fragment"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content" />
-   ```	
+   ```
+   	
    Add new string to res/values/strings.xml ([commit](https://github.com/Wikia/workshops-android/commit/03f4d3aeb267f0b4e65e832b2a90ae6af68578ff))
    ```xml
    <string name="details">Details</string>
@@ -201,4 +202,81 @@
         
        return layout;
    }
-   ```	   
+   ``` 
+   
+5. Saving/Retrieving username with SharedPreferences
+
+   Add new strings to res/values/strings.xml ([commit](https://github.com/Wikia/workshops-android/commit/ecb009c30baee5831e6742c02be48b3c90c4da5e))
+   ```xml
+   <string name="send">Send</string>
+   <string name="username">Username</string>
+   <string name="username_send">Username %1$s send</string>
+   ```	
+   
+   Remove from res/layout-land/ fragment_user_data.xml layout file ([commit](https://github.com/Wikia/workshops-android/commit/e3ec3882b9c5fcd0026a0d4ac3d36191ffb409d8))
+
+   Change res/layout/fragment_user_data.xml to have EditText for username ([commit](https://github.com/Wikia/workshops-android/commit/3bc1e10f95429b056e5a20e3aaa2137db3efd00f))
+   ```xml
+   <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/username"
+            android:inputType="text"
+            android:padding="15dp" />
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send"
+            style="@style/ButtonAppTheme" />
+   </LinearLayout>
+   ```	
+   
+   In UserDataFragment get EditText and retrieve username string from SharedPreferences
+   Save username string to SharedPreferences after clicking on Button 
+   Display Toast with saved username ([commit](https://github.com/Wikia/workshops-android/commit/0ea35ff96502971974e6cc20db09259edeb05ac3))
+   ```java
+   private static final String USERNAME_KEY = "username";
+   private SharedPreferences mSettings;
+   
+   @Override
+   public View onCreateView(LayoutInflater inflater, ViewGroup container,
+            Bundle savedInstanceState) {
+
+       mSettings = PreferenceManager.getDefaultSharedPreferences(getActivity().getBaseContext());
+
+       View layout = inflater.inflate(R.layout.fragment_user_data, container, false);
+       final EditText userName = (EditText) layout.findViewById(R.id.username);
+       userName.setText(mSettings.getString(USERNAME_KEY, ""));
+
+       final Button button = (Button) layout.findViewById(R.id.send);
+       button.setOnClickListener(new OnClickListener() {
+
+           @Override
+           public void onClick(View view) {
+               String userNameString = userName.getText().toString();
+
+               SharedPreferences.Editor editor = mSettings.edit();
+               editor.putString(USERNAME_KEY, userNameString);
+               editor.apply();
+                
+               Toast.makeText(getActivity(), getResources().getString(R.string.username_send, userNameString), 
+                        Toast.LENGTH_SHORT).show();
+           }
+       });
+        
+       return layout;
+   }
+   ``` 
+   
+   Change android:layout_width of UserDataFragment in res/layout/activity_main.xml ([commit](https://github.com/Wikia/workshops-android/commit/69593dd841a41cd237853717ab7dcbd668745693))
+   ```xml
+   android:layout_width="match_parent"
+   ```
