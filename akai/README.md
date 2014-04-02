@@ -63,3 +63,7 @@
        android:layout_width="wrap_content"
        android:layout_height="wrap_content" />
    ```	
+   Add new string to res/values/strings.xml ([commit](https://github.com/Wikia/workshops-android/commit/03f4d3aeb267f0b4e65e832b2a90ae6af68578ff))
+   ```xml
+   <string name="details">Details</string>
+   ```	
