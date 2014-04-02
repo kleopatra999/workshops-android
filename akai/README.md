@@ -29,7 +29,7 @@
    
 2. Adding Fragment with Button
    
-   Create new file in res/layout called fragment_user_data.xml 
+   Create new file in res/layout called fragment_user_data.xml ([commit](https://github.com/Wikia/workshops-android/commit/1284c8e185d2b57558d927cb810ddc76289ea35a))
    ```xml
    <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
