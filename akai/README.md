@@ -55,4 +55,11 @@
            return inflater.inflate(R.layout.fragment_user_data, container, false);
        }
    }
-   ```	   
+   ``` 
+   Replace TextView with UserDataFragment in res/layout/activity_main.xml ([commit](https://github.com/Wikia/workshops-android/commit/ee4fcb958b38f42098d3f00f701083040ded5085))
+   ```xml
+   <fragment android:name="com.wikia.akai.UserDataFragment"
+       android:id="@+id/user_data_fragment"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" />
+   ```	
