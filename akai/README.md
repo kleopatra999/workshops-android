@@ -68,3 +68,11 @@
    <string name="details">Details</string>
    ```	
    Change Button text to new details string ([commit](https://github.com/Wikia/workshops-android/commit/727d3ddbc12eece02c997cf21ee36c2aeb43eec4))
+   
+   Add new folder res/layout-land/ and fragment_user_data.xml inside it ([commit](https://github.com/Wikia/workshops-android/commit/5a95f137b53091f2b6a2547ee887071790ef7283))
+      ```xml
+   <Button xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/app_name" />
+   ```	
