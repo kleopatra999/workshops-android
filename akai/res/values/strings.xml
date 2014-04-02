@@ -6,6 +6,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="details">Details</string>
     <string name="details_content">Here you can display detailed information about selected item</string>
+    <string name="load">Load</string>
     <string name="send">Send</string>
     <string name="username">Username</string>
     <string name="username_send">Username %1$s send</string>
