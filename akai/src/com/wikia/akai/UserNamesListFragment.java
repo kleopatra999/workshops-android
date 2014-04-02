@@ -50,8 +50,8 @@ public class UserNamesListFragment extends Fragment {
                     String userNamesList = "";
                     for (ParseObject userDataObject : objects) {
                         userNamesList += userDataObject.get(USERNAME_KEY).toString() + "\n";
-                        userName.setText(userNamesList);
                      }
+                    userName.setText(userNamesList);
                 } else {
                     Log.d("UsersData", "Error: " + e.getMessage());
                 }
