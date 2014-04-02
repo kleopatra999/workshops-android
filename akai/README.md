@@ -239,8 +239,8 @@
    </LinearLayout>
    ```	
    
-   In UserDataFragment get EditText and retrieve username string from SharedPreferences
-   Save username string to SharedPreferences after clicking on Button 
+   In UserDataFragment get EditText and retrieve username string from SharedPreferences  
+   Save username string to SharedPreferences after clicking on Button  
    Display Toast with saved username ([commit](https://github.com/Wikia/workshops-android/commit/0ea35ff96502971974e6cc20db09259edeb05ac3))
    ```java
    private static final String USERNAME_KEY = "username";
