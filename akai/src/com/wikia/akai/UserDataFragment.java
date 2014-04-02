@@ -1,5 +1,7 @@
 package com.wikia.akai;
 
+import com.parse.ParseObject;
+
 import android.app.Fragment;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -15,7 +17,6 @@ import android.widget.Toast;
 public class UserDataFragment extends Fragment {
 
     private static final String USERNAME_KEY = "username";
-
     private SharedPreferences mSettings;
 
     @Override
@@ -38,12 +39,16 @@ public class UserDataFragment extends Fragment {
                 SharedPreferences.Editor editor = mSettings.edit();
                 editor.putString(USERNAME_KEY, userNameString);
                 editor.apply();
-                
+
+                ParseObject usersDataObject = new ParseObject("UsersData");
+                usersDataObject.put(USERNAME_KEY, userNameString);
+                usersDataObject.saveInBackground();
+
                 Toast.makeText(getActivity(), getResources().getString(R.string.username_send, userNameString), 
                         Toast.LENGTH_SHORT).show();
             }
         });
-        
+
         return layout;
     }
 }
