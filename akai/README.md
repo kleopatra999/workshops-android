@@ -32,11 +32,11 @@
    Create new file in res/layout called fragment_user_data.xml ([commit](https://github.com/Wikia/workshops-android/commit/1284c8e185d2b57558d927cb810ddc76289ea35a))
    ```xml
    <Button xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/hello_world" />
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/hello_world" />
    ```	
-   Create new class in src/com/wikia/akai called UserDataFragment
+   Create new class in src/com/wikia/akai called UserDataFragment ([commit](https://github.com/Wikia/workshops-android/commit/48f04a9a48703ee20c1d1baf61009e2f7a99eb3b))
    ```java
    package com.wikia.akai;
 
