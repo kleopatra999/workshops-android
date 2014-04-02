@@ -281,7 +281,7 @@
    android:layout_width="match_parent"
    ```
    
-   6. Storing/Loading usernames on server side with Parse
+6. Storing/Loading usernames on server side with Parse
    
    Add new string to res/values/strings.xml ([commit](https://github.com/Wikia/workshops-android/commit/b282a225f39214bfc5243b0559d4f2bff922a43d))
    ```xml
