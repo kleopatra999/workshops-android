@@ -69,10 +69,43 @@
    ```	
    Change Button text to new details string ([commit](https://github.com/Wikia/workshops-android/commit/727d3ddbc12eece02c997cf21ee36c2aeb43eec4))
    
-   Add new folder res/layout-land/ and fragment_user_data.xml inside it ([commit](https://github.com/Wikia/workshops-android/commit/5a95f137b53091f2b6a2547ee887071790ef7283))
-      ```xml
+   Add new folder res/layout-land/ and fragment_user_data.xml file inside it ([commit](https://github.com/Wikia/workshops-android/commit/5a95f137b53091f2b6a2547ee887071790ef7283))
+   ```xml
    <Button xmlns:android="http://schemas.android.com/apk/res/android"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:text="@string/app_name" />
    ```	
+3. Styling Button with 9-patch background
+
+   Add drawables from assets/button_drawable.zip ([commit](https://github.com/Wikia/workshops-android/commit/1099552647e40bba55d75dd127c83aabbc40e66a))
+   
+   Add new folder res/drawables and btn_default_holo_light.xml file inside it ([commit](https://github.com/Wikia/workshops-android/commit/44cfa284d6db024c45b66468014ec794164fdc6d))
+   ```xml
+   <?xml version="1.0" encoding="utf-8"?>
+   <selector xmlns:android="http://schemas.android.com/apk/res/android">
+       <item android:state_window_focused="false" android:state_enabled="true"
+           android:drawable="@drawable/btn_default_normal_holo_light" />
+       <item android:state_window_focused="false" android:state_enabled="false"
+           android:drawable="@drawable/btn_default_disabled_holo_light" />
+       <item android:state_pressed="true"
+           android:drawable="@drawable/btn_default_pressed_holo_light" />
+       <item android:state_focused="true" android:state_enabled="true"
+           android:drawable="@drawable/btn_default_focused_holo_light" />
+       <item android:state_enabled="true"
+           android:drawable="@drawable/btn_default_normal_holo_light" />
+       <item android:state_focused="true"
+           android:drawable="@drawable/btn_default_disabled_focused_holo_light" />
+       <item
+           android:drawable="@drawable/btn_default_disabled_holo_light" />
+   </selector>
+   ```	
+   
+   Add style for button to res/values/styles.xml ([commit](https://github.com/Wikia/workshops-android/commit/dae03f21a610f547754413d0c5396c9db48985b4))
+   ```xml
+   <style name="ButtonAppTheme" parent="android:Widget.Holo.Light.Button">
+       <item name="android:background">@drawable/btn_default_holo_light</item>
+   </style>
+   ```	
+   
+   Set new style on Button in res/layout/fragment_user_data.xml ([commit](https://github.com/Wikia/workshops-android/commit/b81c3939873b9f5bea36711184d6c3013e253365))
